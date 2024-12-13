@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #FFD100 33.33%, #0033A0 33.33%, #CE1126 33.33%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        a, button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        a:hover, button:hover {
+            background-color: rgba(255, 255, 255, 1);
+            transform: scale(1.05);
+        }
+        button {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a CARS</h1>
+    <a href="{% url 'listadoModelos' %}">Ir al listado de modelos</a>
+    <a href="{% url 'listadoCiudades' %}">Ir al listado de ciudades</a>
+    <a href="{% url 'listadoVehiculos' %}">Ir al listado de vehículos</a>
+    <a href="{% url 'listadoPropietarios' %}">Ir al listado de propietarios</a>
+</body>
+</html>
